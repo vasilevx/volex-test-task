@@ -1,0 +1,129 @@
+.blue-header {
+    display: block;
+    width: 100%;
+    background-color: $clr-blue-menu;
+
+}
+
+.blue-header__container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 60px;
+
+
+
+    &>li {
+        position: relative;
+    }
+
+    &>li:hover .sub-menu,
+    &>li a:focus + .sub-menu
+     {
+        display: block;
+    }
+
+    @media(max-width: 767px) {
+        display: none;
+        margin-top: 0px;
+        padding: 0;
+
+        &--show {
+            display: block;
+        }
+    }
+
+
+
+    @media(min-width:768px) and (max-width: 1199px) {
+        &>li:nth-child(5) {
+            display: none;
+        }
+    }
+
+    a {
+        display: block;
+        color: #ffffff;
+        @include fontSizeREM(14);
+        text-transform: uppercase;
+        padding: 15px 30px 15px 30px;
+
+        @media (max-width: 790px) {
+            padding: 15px 20px 15px 20px;
+        }
+
+        &:hover,
+        &:focus,
+         {
+            background-color: $clr-blue-menu--hover;
+        }
+    }
+
+    .sub-menu {
+        z-index: 10;
+        display: block;
+        padding: 15px 0;
+        background: #0066b3;
+        width: 100%;
+        li {
+            width: 100%;
+        }
+
+        a {
+            text-transform: none;
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+
+        @media(min-width: 768px) {
+            display: none;
+            position: absolute;
+        }
+    }
+}
+
+.blue-header__menu-toggler {
+
+   position: relative;
+    text-transform: uppercase;
+    display: none;
+    font-weight: bold;
+    vertical-align: middle;
+    @include fontSizeREM(14);
+    color: #ffffff;
+    width: 50%;
+    text-align: center;
+    //left: 40px;
+    text-align: left;
+    padding: 14px 0;
+    padding-left: 60px;
+
+    &:hover,
+    &:focus,
+    &--show {
+        background-color: $clr-blue-menu--hover;
+    }
+
+    @media(max-width: 767px) {
+        display: block;
+    }
+
+    &::before {
+        position: absolute;
+        left: 30px;
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        top: 15px;
+        box-sizing: border-box;
+        border-top: 2px solid #ffffff;
+        border-bottom:7px double #ffffff;
+        height: 12px;
+        width: 14px;
+    }
+
+    .menu-toggler__text {
+        vertical-align: top;
+        
+    }
+}
+

@@ -1,0 +1,136 @@
+.white-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 21px;
+
+    @media(min-width: 768px) and (max-width: 1200px) {
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+        padding-top: 19px;
+    }
+
+    @media (max-width: 767px) {
+        position: relative;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+    }
+
+  
+
+    .logo {
+        //max-width: 270px;
+        //min-width: 170px;
+        img {
+            max-width: 233px;
+           // min-width: 170px;
+        }
+        width: 5/12/2 * 100 * 1%;
+
+        @media(min-width: 768px) and (max-width: 1200px) {
+            width: 170px;
+            img {
+                width: 170px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            width: 170/368 * 100 * 1%;
+        }
+
+        
+    }
+
+    .btn-blue {
+        max-width: 170px;
+        flex-shrink: 0;
+
+        @media (max-width: 767px) {
+           order: 2;
+           width: 50%;
+           max-width: 100%;
+           position: absolute;
+           bottom: -44px;
+           right: 0;
+        }
+
+    }
+
+    .numbers {
+        @include fontSizeREM(18);
+        color: $text-color;
+        font-weight: bold;
+        width: 2/12 * 100 * 1%;
+
+        @media(min-width: 768px) and (max-width: 1200px) {
+            width: 170/770 * 100 * 1%;
+        }
+
+        @media (max-width: 767px) {
+            width: 170/368 * 100 * 1%;
+            margin: 0 auto;
+            margin-right: 0;
+        }
+
+        @media(max-width: 385px) {
+            @include fontSizeREM(14);
+        }
+
+    }
+
+    .schema {
+        display: block;
+        color: $text-color;
+       // width: 5/12/2 * 100 * 1%;
+       @include fontSizeREM(16);
+        padding: 0;
+        margin: 0 auto;
+        background-image: url('../img/club-schema.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+        box-sizing: border-box;
+        padding-left: 41px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+
+        @media(min-width: 768px) and (max-width: 1200px) {
+            margin: 0;
+        }
+        
+        @media (max-width: 767px) {
+            order: 1;
+            margin-left: 0;
+            width: 170/368 * 100 * 1%;
+        }
+
+        @media(max-width: 360px) {
+            @include fontSizeREM(14);
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+
+
+        
+    }
+
+    .adress {
+        width: 3/12 * 100 * 1%;
+        @include fontSizeREM(14);
+
+        @media(min-width: 768px) and (max-width: 1200px) {
+            order: 2;
+            width: 100%;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+            order: 1;
+            width: 170/368 * 100 * 1%;
+        }
+    }
+}

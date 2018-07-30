@@ -1,0 +1,150 @@
+.slider {
+    padding: 0;
+    width: 100%;
+   
+    img {
+        display: block;
+    }
+    
+
+}
+
+.sl-wr {
+    width: 100%;
+    position: relative;
+}
+
+
+.slider-arrows {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    height: 85px;
+    //background: red;
+    margin: auto;
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+
+  @media(max-width: 767px) {
+    height: 50px;
+  }
+   
+
+}
+
+.slider-arrow {
+    display: block;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 85px;
+    background-color: rgba(0,0,0,0.7);
+
+    &:hover,
+    &:focus {
+        background-color: rgba(0,0,0,0.6);
+    }
+
+    &--prev::before,
+    &--next::before {
+        width: 16px;
+        height: 16px;
+
+        content: '';
+        display: block;
+        
+        top: 35px;
+        transform: rotate(45deg);
+        position: absolute;
+
+        @media (max-width: 767px) {
+            top: 20px;
+            width: 10px;
+            height: 10px;
+        }
+
+    }
+
+    &--prev::before {
+        border-left: 2px solid $clr-bg-grey;
+        border-bottom: 2px solid $clr-bg-grey;
+        left: 20px;
+    }
+
+    &--next::before {
+        border-top: 2px solid $clr-bg-grey;
+        border-right: 2px solid $clr-bg-grey;
+        right: 20px;
+    }
+
+    @media(max-width: 767px) {
+        width: 30px;
+        height: 50px;
+
+        &--prev::before {
+            left: 12px;
+        }
+    
+        &--next::before {
+            right: 12px;
+        }
+    }
+
+}
+
+.slider-dots {
+   padding: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 0 auto;
+   left: 0; 
+    bottom: 35px; 
+    height: 15px;
+    right: 0;
+    outline: none;
+
+    @media(max-width: 767px)  {
+        bottom: 20px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    li button {
+        padding: 0;
+        margin: 0 4px;
+        box-sizing: border-box;
+        width: 14px;
+        height: 14px;
+        border: 3px solid #ffffff;
+        background-color: #fff;
+        border-radius: 50%;
+        font-size: 0;
+        &::before {
+            font-size: 0;
+            display: block;
+            content: '';
+            width: 0;
+            height: 0;
+            padding: 0;
+            margin: 0;
+            line-height: 0;
+        }
+    }
+
+    .slick-active button {
+        border: 3px solid rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255,0);
+    }
+
+
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}

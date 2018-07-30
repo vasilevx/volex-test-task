@@ -1,0 +1,137 @@
+.ya-map {
+    height: 625px;
+    @media (max-width: 767px) {
+        height: 400px;
+    }
+
+    @media(max-width: 1199px) {
+        height: 430px;
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: $footer-bg;
+    color: $clr-bg-grey;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    a {
+        color: $clr-bg-grey;
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include fontSizeREM(14);
+
+    }
+
+    .footer__contacts {
+        width: 3/12* 100 * 1%;
+        @media (max-width:767px) {
+            width: 50%;
+        }
+        margin-bottom: 60px;
+        
+        p {
+            padding: 10px 0;
+        }
+    }
+
+    .logo {
+        
+        img {
+            max-width: 235px;
+           // min-width: 170px;
+        }
+        //width: 5/12/2 * 100 * 1%;
+
+
+    }
+
+    .footer__vk-link {
+        display: block;
+        background-image: url('../img/vk-icon.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 34px;
+
+    }
+
+    .footer__locations,
+    .footer__services,
+    .footer__menu {
+        margin-bottom: 60px;
+
+        @media (max-width: 900px) {
+            width: 45%;
+        }
+
+        &>li {
+            a {
+                display: block;
+                padding-bottom: 10px;
+                font-weight: bold;
+
+            }
+
+        }
+        .footer__schema {
+            @include fontSizeREM(16);
+            padding: 0;
+            display: block;
+            font-weight: normal;
+            margin: 0 auto;
+            margin-top: 10px;
+            background-image: url('../img/club-schema_footer.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+            box-sizing: border-box;
+            padding-left: 30px;
+            
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+
+    }
+
+    .sub-menu li a {
+        @include fontSizeREM(13);
+        font-weight: normal;
+        padding-bottom: 6px;
+        padding-left: 12px;
+
+    }
+
+
+
+    .numbers {
+        padding-top: 12px;
+        @include fontSizeREM(18);
+        
+        @media(max-width: 380px) {
+            @include fontSizeREM(15);
+        }
+        font-weight: bold;
+    }
+
+    .copyright {
+        @include fontSizeREM(12);
+        color: #c6c6c6;
+        margin: 0 auto;
+        text-align: center;
+        a {
+            color: #c6c6c6;
+            text-decoration: underline;
+        }
+    }
+
+
+}
